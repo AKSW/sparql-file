@@ -12,5 +12,5 @@ $ GRAPH_FILE=graph.ttl poetry run uvicorn sparql_file:app --host 0.0.0.0 --port 
 
 ```
 $ task build
-$ podman run -d --rm -v /path/to/graph_file.ttl:/data/graph.ttl:z -p 8080:8080 localhost/sparql_file:latest
+$ podman run -d --rm -v /path/to/graph_file.ttl:/data/graph.ttl:z -p 8080:8080 ghcr.io/aksw/sparql-file:main
 ```
