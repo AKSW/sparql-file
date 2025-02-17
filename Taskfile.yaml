@@ -1,0 +1,25 @@
+version: '3'
+
+tasks:
+  install:
+    desc: Install the dependencies
+    cmds:
+      - poetry install
+
+  serve:
+    desc: Start a development server
+    aliases: [run]
+    cmds:
+      - poetry run fastapi dev sparql_file.py
+
+  build:
+    desc: Build the container image
+    cmds:
+      - podman build -t sparql_file .
+
+  format:
+    desc: Format the code
+    aliases: ["ruff"]
+    cmds:
+      - poetry run ruff format
+      - poetry run ruff check --fix
