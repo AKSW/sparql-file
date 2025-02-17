@@ -18,11 +18,12 @@ RUN poetry install --without dev --no-root && rm -rf $POETRY_CACHE_DIR
 FROM python:3.13-alpine as runtime
 
 ENV VIRTUAL_ENV=/app/.venv \
-    PATH="/app/.venv/bin:$PATH"
+    PATH="/app/.venv/bin:$PATH" \
+    GRAPH_FILE="/data/graph.ttl"
 
 COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
 COPY sparql_file.py ./sparql_file.py
 COPY README.md ./README.md
 
-CMD ["fastapi", "run", "sparql_file.py", "--port", "8080"]
+CMD ["uvicorn", "sparql_file:app", "--host", "0.0.0.0", "--port", "8080"]
