@@ -9,7 +9,8 @@ license = {text = "GPLv3+"}
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "rdflib-endpoint (>=0.5.1,<0.6.0)"
+    "rdflib-endpoint (>=0.5.1,<0.6.0)",
+    "fastapi[standard] (>=0.115.8,<0.116.0)"
 ]
 
 
