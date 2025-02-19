@@ -10,11 +10,22 @@ tasks:
     desc: Start a development server
     aliases: [run]
     cmds:
+      - task: serve:dev
+
+  serve:dev:
+    desc: Start a development server
+    cmds:
       - poetry run fastapi dev sparql_file.py
 
   serve:uvicorn:
+    desc: Run with uvicorn
     cmds:
       - poetry run uvicorn sparql_file:app --host 0.0.0.0 --port 8080
+
+  serve:container:
+    desc: Run the container with podman
+    cmds:
+      - podman run -d --rm -v {{.GRAPH_FILE}}:/data/graph.ttl:z -p 8080:8080 ghcr.io/aksw/sparql-file:main
 
   build:
     desc: Build the container image
