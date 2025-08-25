@@ -37,9 +37,9 @@ $ GRAPH_FILE=graph.ttl task serve:uvicorn
 or
 
 ```sh
-$ GRAPH_FILE=graph.ttl poetry run fastapi dev sparql_file.py
+$ GRAPH_FILE=graph.ttl poetry run fastapi dev sparql_file/env.py
 # or
-$ GRAPH_FILE=graph.ttl poetry run uvicorn sparql_file:app --host '' --port 8080
+$ GRAPH_FILE=graph.ttl poetry run uvicorn sparql_file.env:app --host '' --port 8080
 ```
 
 ## Run With Podman/Docker (local build)
