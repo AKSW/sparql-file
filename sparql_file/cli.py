@@ -12,8 +12,9 @@ def cli(
     host: str = "0.0.0.0",
     port: str = "8000",
     example_query: str = DEFAULT_EXAMPLE_QUERY,
+    graph_format: str | None = None,
 ):
-    """Start the sparql file server"""
+    """Start a SPARQL 1.1 endpoint based on the given RDF file."""
     endpoint = sparql_file(graph_file, example_query)
     uvicorn.run(endpoint, host=host, port=port)
 
