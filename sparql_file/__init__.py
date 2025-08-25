@@ -6,10 +6,13 @@ DEFAULT_EXAMPLE_QUERY = "select * { ?s ?p ?o } limit 10"
 
 def sparql_file(
     graph_file: str,
-    example_query: str = DEFAULT_EXAMPLE_QUERY,
+    example_query: str | None = None,
     graph_format: str | None = None,
 ):
     g = Graph()
+
+    if example_query is None:
+        example_query = DEFAULT_EXAMPLE_QUERY
 
     with open(graph_file, "r") as graph_file_io:
         g.parse(source=graph_file_io, format=None)
