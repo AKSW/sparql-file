@@ -1,0 +1,22 @@
+import typer
+import uvicorn
+
+from sparql_file import DEFAULT_EXAMPLE_QUERY, sparql_file
+
+app = typer.Typer()
+
+
+@app.command()
+def cli(
+    graph_file: str,
+    host: str = "0.0.0.0",
+    port: str = "8000",
+    example_query: str = DEFAULT_EXAMPLE_QUERY,
+):
+    """Start the sparql file server"""
+    endpoint = sparql_file(graph_file, example_query)
+    uvicorn.run(endpoint, host=host, port=port)
+
+
+if __name__ == "__main__":
+    app()

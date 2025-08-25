@@ -1,6 +1,6 @@
 [project]
 name = "sparql-file"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = [
     {name = "Natanael Arndt",email = "arndtn@gmail.com"}
@@ -13,6 +13,9 @@ dependencies = [
     "uvicorn (>=0.34.0,<0.35.0)",
 ]
 
+[project.optional-dependencies]
+cli = [ "typer>=0.16.1,<0.17.0" ]
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -21,3 +24,6 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.group.dev.dependencies]
 fastapi = {extras = ["standard"], version = "^0.115.8"}
 ruff = "^0.9.6"
+
+[project.scripts]
+sparql-file = "sparql_file_cli:app"
