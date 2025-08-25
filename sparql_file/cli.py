@@ -10,7 +10,7 @@ app = typer.Typer()
 def cli(
     graph_file: str,
     host: str = "0.0.0.0",
-    port: str = "8000",
+    port: int = 8000,
     example_query: str = DEFAULT_EXAMPLE_QUERY,
     graph_format: str | None = None,
 ):
