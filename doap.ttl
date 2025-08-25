@@ -1,0 +1,24 @@
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://github.com/AKSW/sparql-file> a doap:Project ;
+    doap:bug-database <https://github.com/AKSW/sparql-file/issues> ;
+    doap:description "A simple SPARQL 1.1 endpoint based on a file." ;
+    doap:developer <mailto:arndtn@gmail.com> ;
+    doap:homepage <https://github.com/AKSW/sparql-file> ;
+    doap:license <https://spdx.org/licenses/GPL-3.0-or-later> ;
+    doap:name "sparql-file" ;
+    doap:repository <https://github.com/AKSW/sparql-file.git> ;
+    doap:shortdesc "A simple SPARQL 1.1 endpoint based on a file." .
+
+<https://spdx.org/licenses/GPL-3.0-or-later> rdfs:label "GPL-3.0-or-later" .
+
+<https://github.com/AKSW/sparql-file.git> a doap:Repository ;
+    doap:location <https://github.com/AKSW/sparql-file.git> .
+
+<mailto:arndtn@gmail.com> a foaf:Agent ;
+    foaf:mbox <mailto:arndtn@gmail.com> ;
+    foaf:name "Natanael Arndt" .
+
+

@@ -2,7 +2,19 @@
 
 Serve an RDF file as an [RDFLib](https://rdflib.readthedocs.io/) Graph through a SPARQL endpoint served as [fastapi](https://fastapi.tiangolo.com/) with [rdflib-endpoint](https://pypi.org/project/rdflib-endpoint/) ([github](https://github.com/vemonet/rdflib-endpoint)).
 
-## Install
+## CLI Installation
+
+```sh
+$ pipx install sparql-file[cli]
+```
+
+## Usage
+
+```sh
+$ sparql-file --help
+```
+
+## Development Install
 
 ```sh
 $ task install

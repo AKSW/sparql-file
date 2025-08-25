@@ -1,13 +1,13 @@
 [project]
 name = "sparql-file"
 version = "0.1.1"
-description = ""
+description = "A simple SPARQL 1.1 endpoint based on a file."
 authors = [
     {name = "Natanael Arndt",email = "arndtn@gmail.com"}
 ]
-license = {text = "GPLv3+"}
+license = {text = "GPL-3.0-or-later"}
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.9,<4.0.0"
 dependencies = [
     "rdflib-endpoint (>=0.5.1,<0.6.0)",
     "uvicorn (>=0.34.0,<0.35.0)",
@@ -27,3 +27,8 @@ ruff = "^0.9.6"
 
 [project.scripts]
 sparql-file = "sparql_file.cli:app"
+
+[project.urls]
+homepage = "https://github.com/AKSW/sparql-file"
+"Bug Tracker" = "https://github.com/AKSW/sparql-file/issues"
+repository = "https://github.com/AKSW/sparql-file.git"
