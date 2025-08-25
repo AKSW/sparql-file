@@ -26,4 +26,4 @@ fastapi = {extras = ["standard"], version = "^0.115.8"}
 ruff = "^0.9.6"
 
 [project.scripts]
-sparql-file = "sparql_file_cli:app"
+sparql-file = "sparql_file.cli:app"
