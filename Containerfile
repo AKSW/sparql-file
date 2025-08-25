@@ -23,7 +23,8 @@ ENV VIRTUAL_ENV=/app/.venv \
 
 COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
-COPY sparql_file.py ./sparql_file.py
+COPY sparql_file/__init__.py ./sparql_file/__init__.py
+COPY sparql_file/env.py ./sparql_file/env.py
 COPY README.md ./README.md
 
 CMD ["uvicorn", "sparql_file.env:app", "--host", "", "--port", "8080"]
