@@ -1,7 +1,7 @@
 import typer
 import uvicorn
 
-from sparql_file import DEFAULT_EXAMPLE_QUERY, sparql_file
+from . import DEFAULT_EXAMPLE_QUERY, sparql_file
 
 app = typer.Typer()
 
