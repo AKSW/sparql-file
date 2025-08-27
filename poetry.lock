@@ -730,15 +730,13 @@ tests = ["html5lib", "pytest", "pytest-cov"]
 
 [[package]]
 name = "rdflib-endpoint"
-version = "0.5.1"
+version = "0.5.3"
 description = "A package to deploy SPARQL endpoint to serve local RDF files, machine learning models, or any other logic implemented in Python, using RDFLib and FastAPI."
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
-files = [
-    {file = "rdflib_endpoint-0.5.1-py3-none-any.whl", hash = "sha256:a63926f49aad23a8eea9f09f4cabc7681e18a9d2fb8f1499daecdb3e25d2f6dd"},
-    {file = "rdflib_endpoint-0.5.1.tar.gz", hash = "sha256:228dd0e87068483bcd111f6a89dc7990af5a6f912a4b6776f74a13021f741677"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 fastapi = ">=0.51.0"
@@ -747,8 +745,13 @@ rdflib = ">=6.0.0"
 [package.extras]
 cli = ["click", "uvicorn[standard] (>=0.12.0)"]
 oxigraph = ["oxrdflib"]
-test = ["httpx", "mypy (>=1.4.1)", "pre-commit", "pytest (>=7.1.3)", "pytest-cov (>=3.0.0)", "requests", "types-click", "types-pyyaml", "types-setuptools", "types-ujson"]
-web = ["gunicorn", "uvicorn[standard] (>=0.12.0)"]
+web = ["uvicorn[standard] (>=0.12.0)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/white-gecko/rdflib-endpoint"
+reference = "fix-content-type"
+resolved_reference = "e4efd07e70279b29427a2cabf0bdbf80c034e4fb"
 
 [[package]]
 name = "rich"
@@ -1161,4 +1164,4 @@ cli = ["typer"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.9,<4.0.0"
-content-hash = "b78059b06efbd06bf625c66b5243cf4673b50958e9e5e9b3fd48b7e4dba97043"
+content-hash = "ffaaa0f325fe61f59f47a4913088d3db9ea9bff50b8da8fd1b153375ec1e4243"
