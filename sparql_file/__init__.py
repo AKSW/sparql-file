@@ -1,4 +1,4 @@
-from rdflib import ConjunctiveGraph
+from rdflib import Dataset as Graph
 from rdflib_endpoint import SparqlEndpoint
 
 DEFAULT_EXAMPLE_QUERY = "select * { ?s ?p ?o } limit 10"
@@ -9,7 +9,7 @@ def sparql_file(
     example_query: str | None = None,
     graph_format: str | None = None,
 ):
-    g = ConjunctiveGraph()
+    g = Graph()
 
     if example_query is None:
         example_query = DEFAULT_EXAMPLE_QUERY
