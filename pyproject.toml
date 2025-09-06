@@ -24,6 +24,9 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.group.dev.dependencies]
 fastapi = {extras = ["standard"], version = "^0.115.8"}
 ruff = "^0.9.6"
+simpsons-rdf = "^0.3.0"
+httpx = "^0.28.1"
+pytest = "^8.4.2"
 
 [project.scripts]
 sparql-file = "sparql_file.cli:app"
