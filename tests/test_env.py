@@ -17,7 +17,7 @@ def test_endpoint_with_turtle_graph(tmp_path):
 
     response = client.post(
         "/",
-        data="select ?s ?p ?o {?s ?p ?o} limit 1",
+        content="select ?s ?p ?o {?s ?p ?o} limit 1",
         headers={"Content-Type": "application/sparql-query"},
     )
     assert response.status_code == 200
