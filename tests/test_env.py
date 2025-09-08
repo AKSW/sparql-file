@@ -1,8 +1,9 @@
-from .utils import copy_file
-from simpsons_rdf import simpsons
 import os
 
 from fastapi.testclient import TestClient
+from simpsons_rdf import simpsons
+
+from .utils import copy_file
 
 
 def test_endpoint_with_turtle_graph(tmp_path):
