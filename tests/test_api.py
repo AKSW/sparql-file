@@ -13,3 +13,9 @@ def test_api_with_turtle_graph_specify_format(tmp_path):
     p = tmp_path / "graph_file.ttl"
     copy_file(simpsons.graph_file, p)
     sparql_file(p, graph_format="turtle")
+
+
+def test_api_with_trig_graph_specify_format(tmp_path):
+    p = tmp_path / "dataset.trig"
+    copy_file("tests/data/example_dataset.trig", p)
+    sparql_file(p, graph_format="trig")

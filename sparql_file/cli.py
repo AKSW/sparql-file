@@ -19,7 +19,7 @@ def cli(
     If you want to bind to every address on the IPv4 and IPv6 stack set --host ''
     (cf. https://chaos.social/@white_gecko/114184354432052312)
     """
-    endpoint = sparql_file(graph_file, example_query)
+    endpoint = sparql_file(graph_file, example_query, graph_format)
     uvicorn.run(endpoint, host=host, port=port)
 
 
