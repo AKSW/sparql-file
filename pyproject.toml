@@ -1,6 +1,6 @@
 [project]
 name = "sparql-file"
-version = "0.1.3"
+version = "0.2.0"
 description = "A simple SPARQL 1.1 endpoint based on a file."
 authors = [
     {name = "Natanael Arndt",email = "arndtn@gmail.com"}
