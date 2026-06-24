@@ -9,7 +9,7 @@ license = {text = "GPL-3.0-or-later"}
 readme = "README.md"
 requires-python = ">=3.10,<4.0.0"
 dependencies = [
-    "rdflib-endpoint @ git+https://github.com/white-gecko/rdflib-endpoint@fix-content-type",
+    "rdflib-endpoint (>=0.6.2,<0.7.0)",
     "uvicorn (>=0.34.0,<0.35.0)",
 ]
 
